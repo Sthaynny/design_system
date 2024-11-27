@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import '../../themes/colors/ds_colors.dart';
+import '../../themes/icons/ds_icons.dart';
 
 class DSUploading extends StatefulWidget {
   final double size;
@@ -40,7 +41,6 @@ class _DSUploadingState extends State<DSUploading> {
 
   @override
   Widget build(BuildContext context) {
-    //TODO: ADD ICONE CORRETO
     return Center(
       child: ValueListenableBuilder(
         valueListenable: visibleNotifier,
@@ -48,7 +48,7 @@ class _DSUploadingState extends State<DSUploading> {
           opacity: value ? 1.0 : 0.0,
           duration: const Duration(seconds: 1),
           child: Icon(
-            Icons.upload_outlined,
+            DSIcons.upload_outline,
             color: widget.color,
             size: widget.size,
           ),

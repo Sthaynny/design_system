@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../themes/colors/ds_colors.dart';
+import '../../themes/icons/ds_icons.dart';
 import '../../themes/system_overlay/ds_system_overlay.dart';
 import '../../themes/texts/styles/ds_body_text_style.dart';
 import '../../themes/texts/styles/ds_headline_small_text_style.dart';
@@ -9,7 +10,7 @@ import '../../themes/texts/styles/ds_text_style.dart';
 import '../../utils/ds_utils.dart';
 import '../../widgets/texts/ds_text.widget.dart';
 import '../texts/ds_caption_text.widget.dart';
-import 'ds_user_avatar.widget.dart';
+import 'ds_user_avatar.dart';
 
 class DSHeader extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -150,7 +151,7 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
                     : null,
                 iconSize: 28,
                 icon: Icon(
-                  Icons.arrow_back_ios_rounded,
+                  DSIcons.arrow_left_outline,
                   color: isBackgroundLight
                       ? DSColors.gray.shade500
                       : DSColors.gray.shade200,

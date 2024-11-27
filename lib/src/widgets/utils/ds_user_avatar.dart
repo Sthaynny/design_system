@@ -3,6 +3,7 @@ import 'package:design_system/src/utils/ds_utils.dart';
 import 'package:flutter/material.dart';
 
 import '../../themes/colors/ds_colors.dart';
+import '../../themes/icons/ds_icons.dart';
 import '../../themes/texts/styles/ds_body_text_style.dart';
 import '../texts/ds_text.widget.dart';
 
@@ -87,8 +88,7 @@ class DSUserAvatar extends StatelessWidget {
                     textAlign: TextAlign.center,
                   )
                 : Icon(
-                    //TODO: ADD ICONE CORRETO User
-                    Icons.discount_sharp,
+                    DSIcons.user_default_outline,
                     color: DSColors.gray.shade200,
                     size: 20.0,
                   ),
