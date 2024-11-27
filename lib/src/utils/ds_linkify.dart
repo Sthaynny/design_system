@@ -22,6 +22,7 @@ abstract class DSLinkify {
     required InlineSpan span,
     TextStyle? defaultStyle,
     Color? linkColor,
+    VoidCallback? onErrorAccess,
   }) {
     final List<InlineSpan> formattedSpan = [];
 
@@ -78,8 +79,7 @@ abstract class DSLinkify {
                         }
 
                         if (!hasLaunched) {
-                          throw 'Não abriu a url';
-                          //TODO: toast
+                          onErrorAccess?.call();
                         }
                       },
                   ),
