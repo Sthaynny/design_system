@@ -97,4 +97,5 @@ abstract class DSColors {
   static const Color warning = Color(0xFFF2AB53);
   static const Color system = Color(0xFFB2DFFD);
   static const Color neutralMediumWave = Color(0xFFD2DFE6);
+  static const Color neutralMediumCloud = Color(0xFF8CA0B3);
 }
