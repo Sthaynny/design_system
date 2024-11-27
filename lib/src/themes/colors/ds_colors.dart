@@ -65,7 +65,7 @@ abstract class DSColors {
   }
 
   /// Light gray color palette.
-  static const grayLight = MaterialColor(
+  static const gray = MaterialColor(
     0xFF667085,
     {
       50: Color(0xFFFCFCFD),
@@ -83,25 +83,6 @@ abstract class DSColors {
     },
   );
 
-  /// Dark gray color palette.
-  static const grayDark = MaterialColor(
-    0xFF85888E,
-    {
-      50: Color(0xFFFAFAFA),
-      100: Color(0xFFF5F5F6),
-      150: Color(0xFFF0F1F1),
-      200: Color(0xFFECECED),
-      250: Color(0xFFCECFD2),
-      300: Color(0xFF94969C),
-      400: Color(0xFF85888E),
-      500: Color(0xFF61646C),
-      600: Color(0xFF333741),
-      700: Color(0xFF1F242F),
-      800: Color(0xFF161B26),
-      900: Color(0xFF0C111D),
-    },
-  );
-
   /// The color white
   static const white = Colors.white;
 
@@ -115,4 +96,5 @@ abstract class DSColors {
   static const Color error = Color(0xFFC92929);
   static const Color warning = Color(0xFFF2AB53);
   static const Color system = Color(0xFFB2DFFD);
+  static const Color neutralMediumWave = Color(0xFFD2DFE6);
 }

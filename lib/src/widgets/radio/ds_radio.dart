@@ -220,8 +220,7 @@ class _RadioPainter extends ToggleablePainter {
     if (isEnabled) {
       // Outer circle
       final Paint paint = Paint()
-        ..color =
-            isSelected ? DSColors.neutralDarkCity : DSColors.grayDark.shade500
+        ..color = isSelected ? DSColors.neutralDarkCity : DSColors.gray.shade500
         ..style = PaintingStyle.stroke
         ..strokeWidth = 2.0;
       canvas.drawCircle(center, _kOuterRadius, paint);
@@ -236,12 +235,12 @@ class _RadioPainter extends ToggleablePainter {
     } else {
       // Outer circle background Disabled
       final Paint paintDisabled = Paint()
-        ..color = DSColors.grayLight.shade300
+        ..color = DSColors.gray.shade300
         ..style = PaintingStyle.fill;
 
       // Outer circle Disabled
       final Paint paint = Paint()
-        ..color = DSColors.grayDark.shade300
+        ..color = DSColors.gray.shade300
         ..style = PaintingStyle.stroke
         ..strokeWidth = 2.0;
       canvas.drawCircle(center, _kOuterRadius, paint);
@@ -250,8 +249,8 @@ class _RadioPainter extends ToggleablePainter {
 
       // Inner circle
       if (!position.isDismissed) {
-        paint.color = Color.lerp(
-            inactiveColor, DSColors.grayDark.shade500, position.value)!;
+        paint.color =
+            Color.lerp(inactiveColor, DSColors.gray.shade500, position.value)!;
 
         paint.strokeWidth = _kInnerRadius;
 
