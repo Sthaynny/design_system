@@ -8,8 +8,8 @@ import '../../themes/texts/styles/ds_body_text_style.dart';
 import '../../themes/texts/styles/ds_headline_small_text_style.dart';
 import '../../themes/texts/styles/ds_text_style.dart';
 import '../../utils/ds_utils.dart';
-import '../../widgets/texts/ds_text.widget.dart';
-import '../texts/ds_caption_text.widget.dart';
+import '../texts/ds_text.dart';
+import '../texts/ds_caption_text.dart';
 import 'ds_user_avatar.dart';
 
 class DSHeader extends StatelessWidget implements PreferredSizeWidget {

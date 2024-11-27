@@ -1,12 +1,12 @@
-import '../../themes/texts/styles/ds_body_text_style.dart';
-import 'ds_text.widget.dart';
+import '../../themes/texts/styles/ds_caption_text_style.dart';
+import 'ds_text.dart';
 
-/// A Design System's [Text] primarily used by body texts like messages and inputs.
+/// A Design System's [Text] primarily used by regular subtitles and descriptions.
 ///
-/// Sets [DSBodyTextStyle] as [style] default value. This style's font variant is $fs-16-p1.
-class DSBodyText extends DSText {
-  /// Creates a Design System's [Text] with $fs-16-p1 font variant.
-  DSBodyText(
+/// Sets [DSCaptionRegularTextStyle] as [style] default value.
+class DSCaptionText extends DSText {
+  /// Creates a Design System's [Text] with $fs-14-p2 font variant.
+  DSCaptionText(
     super.text, {
     super.key,
     super.fontWeight,
@@ -19,9 +19,9 @@ class DSBodyText extends DSText {
     super.maxLines,
     super.shouldLinkify,
     super.isSelectable,
-    super.height = 1.5,
+    super.height = 1.57,
   }) : super(
-          style: DSBodyTextStyle(
+          style: DSCaptionTextStyle(
             fontWeight: fontWeight,
             fontStyle: fontStyle,
             color: color,
@@ -31,7 +31,7 @@ class DSBodyText extends DSText {
           ),
         );
 
-  DSBodyText.rich(
+  DSCaptionText.rich(
     super.textSpan, {
     super.key,
     super.fontWeight,
@@ -44,9 +44,9 @@ class DSBodyText extends DSText {
     super.maxLines,
     super.shouldLinkify,
     super.isSelectable,
-    super.height = 1.5,
+    super.height = 1.57,
   }) : super.rich(
-          style: DSBodyTextStyle(
+          style: DSCaptionTextStyle(
             fontWeight: fontWeight,
             fontStyle: fontStyle,
             color: color,

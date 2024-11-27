@@ -1,50 +1,48 @@
-import '../../themes/texts/styles/ds_headline_small_text_style.dart';
-import 'ds_text.widget.dart';
+import '../../themes/texts/styles/ds_button_text_style.dart';
+import 'ds_text.dart';
 
-/// A Design System's [Text] primarily used by small titles.
+/// A Design System's [Text] primarily used by buttons.
 ///
-/// Sets [DSHeadlineSmallTextStyle] as [style] default value. This style's font variant is $fs-16-p1.
-class DSHeadlineSmallText extends DSText {
+/// Sets [DSButtonTextStyle] as [style] default value. This style's font variant is $fs-16-p1.
+class DSButtonText extends DSText {
   /// Creates a Design System's [Text] with $fs-16-p1 font variant.
-  DSHeadlineSmallText(
+  DSButtonText(
     super.text, {
+    required super.color,
     super.key,
-    super.color,
-    super.linkColor,
     super.overflow,
     super.fontStyle,
     super.textAlign,
     super.maxLines,
-    super.shouldLinkify,
     super.isSelectable,
     super.height = 1.5,
   }) : super(
-          style: DSHeadlineSmallTextStyle(
+          style: DSButtonTextStyle(
             color: color,
             overflow: overflow,
             fontStyle: fontStyle,
             height: height,
           ),
+          shouldLinkify: false,
         );
 
-  DSHeadlineSmallText.rich(
+  DSButtonText.rich(
     super.textSpan, {
+    required super.color,
     super.key,
-    super.color,
-    super.linkColor,
     super.overflow,
     super.fontStyle,
     super.textAlign,
     super.maxLines,
-    super.shouldLinkify,
     super.isSelectable,
     super.height = 1.5,
   }) : super.rich(
-          style: DSHeadlineSmallTextStyle(
+          style: DSButtonTextStyle(
             color: color,
             overflow: overflow,
             fontStyle: fontStyle,
             height: height,
           ),
+          shouldLinkify: false,
         );
 }

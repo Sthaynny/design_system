@@ -1,6 +1,6 @@
 import '../../themes/texts/styles/ds_headline_large_text_style.dart';
 import '../../themes/texts/utils/ds_font_weights.theme.dart';
-import 'ds_text.widget.dart';
+import 'ds_text.dart';
 
 /// A Design System's [Text] primarily used by large titles.
 ///

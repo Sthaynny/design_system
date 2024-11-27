@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../../themes/colors/ds_colors.dart';
 import '../../themes/icons/ds_icons.dart';
 import '../../themes/texts/styles/ds_body_text_style.dart';
-import '../texts/ds_text.widget.dart';
+import '../texts/ds_text.dart';
 
 class DSUserAvatar extends StatelessWidget {
   final String? text;

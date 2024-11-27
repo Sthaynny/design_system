@@ -1,12 +1,12 @@
-import '../../themes/texts/styles/ds_caption_text_style.dart';
-import 'ds_text.widget.dart';
+import '../../themes/texts/styles/ds_caption_small_text_style.dart';
+import 'ds_text.dart';
 
-/// A Design System's [Text] primarily used by regular subtitles and descriptions.
+/// A Design System's [Text] primarily used by small subtitles and descriptions.
 ///
-/// Sets [DSCaptionRegularTextStyle] as [style] default value.
-class DSCaptionText extends DSText {
-  /// Creates a Design System's [Text] with $fs-14-p2 font variant.
-  DSCaptionText(
+/// Sets [DSCaptionSmallTextStyle] as [style] default value. This style's font variant is $fs-12-p3.
+class DSCaptionSmallText extends DSText {
+  /// Creates a Design System's [Text] with $fs-12-p3 font variant.
+  DSCaptionSmallText(
     super.text, {
     super.key,
     super.fontWeight,
@@ -14,24 +14,22 @@ class DSCaptionText extends DSText {
     super.color,
     super.linkColor,
     super.overflow,
-    super.decoration,
     super.textAlign,
     super.maxLines,
     super.shouldLinkify,
     super.isSelectable,
-    super.height = 1.57,
+    super.height = 1.66,
   }) : super(
-          style: DSCaptionTextStyle(
+          style: DSCaptionSmallTextStyle(
             fontWeight: fontWeight,
             fontStyle: fontStyle,
             color: color,
-            decoration: decoration,
             overflow: overflow,
             height: height,
           ),
         );
 
-  DSCaptionText.rich(
+  DSCaptionSmallText.rich(
     super.textSpan, {
     super.key,
     super.fontWeight,
@@ -39,18 +37,16 @@ class DSCaptionText extends DSText {
     super.color,
     super.linkColor,
     super.overflow,
-    super.decoration,
     super.textAlign,
     super.maxLines,
     super.shouldLinkify,
     super.isSelectable,
-    super.height = 1.57,
+    super.height = 1.66,
   }) : super.rich(
-          style: DSCaptionTextStyle(
+          style: DSCaptionSmallTextStyle(
             fontWeight: fontWeight,
             fontStyle: fontStyle,
             color: color,
-            decoration: decoration,
             overflow: overflow,
             height: height,
           ),

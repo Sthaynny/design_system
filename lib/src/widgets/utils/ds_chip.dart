@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../texts/ds_text.widget.dart';
+import '../texts/ds_text.dart';
 
 class DSChip extends StatelessWidget {
   final DSText? text;
