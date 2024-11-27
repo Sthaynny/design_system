@@ -5,6 +5,7 @@ abstract class DSColors {
   static Color _colorBaseSecundary = const Color(0xFF1B6DDF);
   static MaterialColor primary = const MaterialColor(0xFF7D49F8, {});
   static MaterialColor secundary = const MaterialColor(0xFF1B6DDF, {});
+  static const Color neutralDarkCity = Color(0xFF202C44);
 
   static void inicialize({Color? primary, Color? secundary}) {
     if (primary != null) {
@@ -113,4 +114,5 @@ abstract class DSColors {
   static const Color success = Color(0xFF12825F);
   static const Color error = Color(0xFFC92929);
   static const Color warning = Color(0xFFF2AB53);
+  static const Color system = Color(0xFFB2DFFD);
 }
