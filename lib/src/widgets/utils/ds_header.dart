@@ -4,12 +4,11 @@ import 'package:flutter/services.dart';
 import '../../themes/colors/ds_colors.dart';
 import '../../themes/icons/ds_icons.dart';
 import '../../themes/system_overlay/ds_system_overlay.dart';
-import '../../themes/texts/styles/ds_body_text_style.dart';
 import '../../themes/texts/styles/ds_headline_small_text_style.dart';
 import '../../themes/texts/styles/ds_text_style.dart';
 import '../../utils/ds_utils.dart';
-import '../texts/ds_text.dart';
 import '../texts/ds_caption_text.dart';
+import '../texts/ds_text.dart';
 import 'ds_user_avatar.dart';
 
 class DSHeader extends StatelessWidget implements PreferredSizeWidget {
@@ -52,11 +51,11 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
     this.visible = true,
     final SystemUiOverlayStyle? systemUiOverlayStyle,
   }) : systemUiOverlayStyle =
-            systemUiOverlayStyle ?? DSSystemOverlayStyle.dark {
+            systemUiOverlayStyle ?? DSSystemOverlayStyle.light {
     isBackgroundLight = _backgroundColor.computeLuminance() > 0.5;
   }
 
-  Color get _backgroundColor => backgroundColor ?? DSColors.gray.shade200;
+  Color get _backgroundColor => backgroundColor ?? DSColors.gray.shade100;
   @override
   Widget build(BuildContext context) {
     return AnimatedOpacity(
@@ -81,7 +80,7 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
             automaticallyImplyLeading: false,
             elevation: elevation,
             backgroundColor: Colors.transparent,
-            shadowColor: DSColors.neutralMediumWave,
+            shadowColor: DSColors.primary.shade100.withAlpha(20),
             bottom: bottomWidget != null
                 ? PreferredSize(
                     preferredSize: const Size.fromHeight(48),
@@ -109,15 +108,10 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
       contentPadding:
           _canPop(context) ? EdgeInsets.zero : const EdgeInsets.only(left: 16),
       leading: customerName != null || customerUri != null
-          ? DSUserAvatar(
+          ? DSUserAvatar.secundary(
               text: customerName,
               uri: customerUri,
               radius: 20.0,
-              textStyle: DSBodyTextStyle(
-                color: isBackgroundLight
-                    ? DSColors.gray.shade200
-                    : DSColors.neutralDarkCity,
-              ),
             )
           : null,
       title: DSText(
@@ -125,7 +119,7 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
         style: titleTextStyle ??
             DSHeadlineSmallTextStyle(
               color: isBackgroundLight
-                  ? DSColors.neutralDarkCity
+                  ? DSColors.primary.shade900
                   : DSColors.gray.shade200,
             ),
       ),
@@ -133,7 +127,7 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
           ? DSCaptionText(
               subtitle!,
               color: isBackgroundLight
-                  ? DSColors.neutralDarkCity
+                  ? DSColors.primary.shade700
                   : DSColors.gray.shade200,
             )
           : null,
@@ -153,7 +147,7 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
                 icon: Icon(
                   DSIcons.arrow_left_outline,
                   color: isBackgroundLight
-                      ? DSColors.gray.shade500
+                      ? DSColors.gray.shade300
                       : DSColors.gray.shade200,
                 ),
               )

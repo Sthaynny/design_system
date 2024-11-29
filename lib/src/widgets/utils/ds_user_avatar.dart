@@ -31,6 +31,27 @@ class DSUserAvatar extends StatelessWidget {
           overflow: _defaultTextStyle.overflow,
         );
 
+  factory DSUserAvatar.secundary({
+    Key? key,
+    String? text,
+    Uri? uri,
+    double radius = 25.0,
+    TextStyle? textStyle,
+  }) =>
+      DSUserAvatar(
+        key: key,
+        text: text,
+        uri: uri,
+        radius: radius,
+        textStyle: textStyle?.copyWith(
+              color: DSColors.secundary.shade300,
+            ) ??
+            _defaultTextStyle.copyWith(
+              color: DSColors.secundary.shade300,
+            ),
+        backgroundColor: DSColors.primary.shade900,
+      );
+
   @override
   Widget build(BuildContext context) => uri != null
       ? CachedNetworkImage(

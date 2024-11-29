@@ -61,7 +61,12 @@ class DSText extends StatelessWidget {
       isSelectable ? _buildSelectableText() : _buildText();
 
   InlineSpan get _formattedText {
-    final linkColors = linkColor ?? DSColors.primary.shade700;
+    late final Color linkColors;
+    try {
+      linkColors = linkColor ?? DSColors.primary.shade700;
+    } catch (e) {
+      linkColors = DSColors.black;
+    }
     List<InlineSpan>? formattedText;
 
     if (shouldLinkify) {

@@ -17,10 +17,10 @@ class DSSwitch extends DSSwitchBase {
   final Duration _animationDuration = const Duration(milliseconds: 400);
 
   /// Referring to [inactiveColor] for [isActive] false,
-  final Color _inactiveColor = DSColors.gray.shade300;
+  final Color _inactiveColor = DSColors.gray[250]!;
 
   /// Color for background of the switch widget when [isActive] is true.
-  final Color _activeColor = DSColors.gray.shade300;
+  final Color _activeColor = DSColors.primary.shade500;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,9 @@ class DSSwitch extends DSSwitchBase {
                 margin: const EdgeInsets.symmetric(horizontal: 4.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: DSColors.gray.shade300,
+                  color: isEnabled
+                      ? DSColors.gray.shade100
+                      : DSColors.gray.shade400,
                 ),
               ),
             ),
@@ -65,9 +67,9 @@ class DSSwitch extends DSSwitchBase {
   Color _getSwitchColor() {
     switch (value) {
       case (true):
-        return isEnabled ? _activeColor : DSColors.primary.shade300;
+        return isEnabled ? _activeColor : DSColors.gray.shade300;
       case (false):
-        return isEnabled ? _inactiveColor : DSColors.gray.shade200;
+        return isEnabled ? _inactiveColor : DSColors.gray.shade300;
       default:
         return _activeColor;
     }

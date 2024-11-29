@@ -23,7 +23,7 @@ class DSSecondaryButton extends DSButton {
     Color? foregroundColor,
     Color? borderColor,
   }) : super(
-          backgroundColor: backgroundColor ?? DSColors.gray.shade200,
+          backgroundColor: backgroundColor ?? DSColors.gray.shade100,
           foregroundColor: foregroundColor ??
               (isEnabled ? DSColors.primary.shade800 : DSColors.gray.shade300),
           borderColor: borderColor ??

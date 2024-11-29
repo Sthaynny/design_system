@@ -3,8 +3,30 @@ import 'package:flutter/material.dart';
 abstract class DSColors {
   static Color _colorBasePrimary = const Color(0xFF1B6DDF);
   static Color _colorBaseSecundary = const Color(0xFF7D49F8);
-  static MaterialColor primary = const MaterialColor(0xFF1B6DDF, {});
-  static MaterialColor secundary = const MaterialColor(0xFF7D49F8, {});
+  static MaterialColor primary = const MaterialColor(0xFF1B6DDF, {
+    50: Color(0xffd9e6f9),
+    100: Color(0xffb3cef4),
+    200: Color(0xff8db6ef),
+    300: Color(0xff679de9),
+    400: Color(0xff4185e4),
+    500: Color(0xff1b6ddf),
+    600: Color(0xff165ab9),
+    700: Color(0xff124894),
+    800: Color(0xff0d366f),
+    900: Color(0xff09244a),
+  });
+  static MaterialColor secundary = const MaterialColor(0xFF7D49F8, {
+    50: Color(0xffe9e0fd),
+    100: Color(0xffd3c2fc),
+    200: Color(0xffbea4fb),
+    300: Color(0xffa885fa),
+    400: Color(0xff9267f9),
+    500: Color(0xff7d49f8),
+    600: Color(0xff683cce),
+    700: Color(0xff5330a5),
+    800: Color(0xff3e247c),
+    900: Color(0xff291852),
+  });
   static const Color neutralDarkCity = Color(0xFF202C44);
 
   static void inicialize({Color? primary, Color? secundary}) {
@@ -35,16 +57,16 @@ abstract class DSColors {
     });
 
     secundary = MaterialColor(resultSecundary.$2.value, {
-      50: resultSecundary.$1[2],
-      100: resultSecundary.$1[3],
-      200: resultSecundary.$1[4],
-      300: resultSecundary.$1[5],
-      400: resultSecundary.$1[6],
-      500: resultSecundary.$1[7],
-      600: resultSecundary.$1[8],
-      700: resultSecundary.$1[9],
-      800: resultSecundary.$1[10],
-      900: resultSecundary.$1[11],
+      50: resultSecundary.$1[1],
+      100: resultSecundary.$1[2],
+      200: resultSecundary.$1[3],
+      300: resultSecundary.$1[4],
+      400: resultSecundary.$1[5],
+      500: resultSecundary.$1[6],
+      600: resultSecundary.$1[7],
+      700: resultSecundary.$1[8],
+      800: resultSecundary.$1[9],
+      900: resultSecundary.$1[10],
     });
   }
 

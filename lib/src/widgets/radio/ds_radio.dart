@@ -220,7 +220,8 @@ class _RadioPainter extends ToggleablePainter {
     if (isEnabled) {
       // Outer circle
       final Paint paint = Paint()
-        ..color = isSelected ? DSColors.neutralDarkCity : DSColors.gray.shade500
+        ..color =
+            isSelected ? DSColors.primary.shade900 : DSColors.gray.shade500
         ..style = PaintingStyle.stroke
         ..strokeWidth = 2.0;
       canvas.drawCircle(center, _kOuterRadius, paint);

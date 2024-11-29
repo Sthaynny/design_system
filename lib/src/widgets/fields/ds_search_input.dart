@@ -45,13 +45,13 @@ class DSSearchInput extends StatelessWidget {
             child: IconButton(
               splashRadius: 1,
               onPressed: () => onClear(),
-              icon: const Icon(
+              icon: Icon(
                 DSIcons.error_solid,
-                color: DSColors.neutralMediumCloud,
+                color: DSColors.secundary.shade900,
               ),
             ),
           ),
-          fillColor: DSColors.gray.shade200,
+          fillColor: DSColors.gray.shade50,
           prefixIconConstraints: const BoxConstraints(
             minWidth: 25.0,
             minHeight: 25.0,
@@ -63,7 +63,7 @@ class DSSearchInput extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(2.0),
               decoration: BoxDecoration(
-                color: iconBackgroundColor ?? DSColors.gray.shade200,
+                color: iconBackgroundColor ?? DSColors.gray.shade50,
                 borderRadius: const BorderRadius.all(
                   Radius.circular(8.0),
                 ),

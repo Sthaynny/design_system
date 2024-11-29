@@ -65,8 +65,8 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
             padding: const EdgeInsets.fromLTRB(12.0, 6.0, 4.0, 6.0),
             decoration: BoxDecoration(
               color: widget.isEnabled
-                  ? DSColors.gray.shade200
-                  : DSColors.gray.shade50,
+                  ? DSColors.gray.shade50
+                  : DSColors.gray.shade200,
               border: Border.all(color: value),
               borderRadius: BorderRadius.circular(8),
             ),
@@ -77,7 +77,7 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
               onChanged: widget.onChanged,
               style: DSBodyTextStyle(
                 color: widget.isEnabled
-                    ? DSColors.neutralDarkCity
+                    ? DSColors.primary.shade900
                     : DSColors.gray.shade50,
               ),
               autofocus: false,
@@ -85,15 +85,15 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
               inputFormatters: widget.inputFormatters,
               decoration: InputDecoration(
                 fillColor: widget.isEnabled
-                    ? DSColors.gray.shade200
-                    : DSColors.gray.shade50,
+                    ? DSColors.gray.shade50
+                    : DSColors.gray.shade300,
                 contentPadding: EdgeInsets.zero,
                 border: InputBorder.none,
                 labelText: widget.labelText,
                 labelStyle: DSCaptionTextStyle(
                   fontWeight: DSFontWeights.bold,
                   color: widget.isEnabled
-                      ? DSColors.neutralMediumCloud
+                      ? DSColors.primary.shade800
                       : DSColors.gray.shade50,
                 ),
                 filled: true,
