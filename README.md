@@ -1,8 +1,8 @@
 <p align="center">
-   <img src="https://user-images.githubusercontent.com/46109133/149638236-08219c77-c837-4883-b428-8bd5c864e850.png" alt="dt money" width="200"/>
-</p>
+   <img src="https://github.com/user-attachments/assets/91e5c17b-9110-493e-8d2f-b55fc7c2d45e" alt="dt money" width="200"/>
+</p> 
 
-<h1 align="center">Nome do projeto</h1>
+<h1 align="center">Meu Design System</h1>
 
 <p align="center">
    <a href="https://www.linkedin.com/in/igor-sthaynny/">
@@ -17,8 +17,7 @@
   </a>
 </p>
 
-<p align="center">Breve descricao do projeto</p>
-
+<p align="center">Criação de Design system para projetos pessoais com intuito de treinar e facilitar o dedenvolvimento de novos projetos para estudos continuos.</p>
 <hr />
 
 <div align="center">
@@ -30,27 +29,20 @@
 # 📌 Contents
 
 - [📌 Contents](#-contents)
-- [:camera: Screenshots](#camera-screenshots)
 - [:rocket: Tecnologias](#rocket-tecnologias)
 - [:computer: Como rodar](#computer-como-rodar)
 - [:bug: Issues](#bug-issues)
 - [:sparkles: Contribuição](#sparkles-contribuição)
 - [:page_facing_up: Licença](#page_facing_up-licença)
 
-# :camera: Screenshots
-<div align="center">
-   <img src="https://user-images.githubusercontent.com/46109133/155231022-7d54b0eb-a0c5-4e60-a244-3e5c30fc9373.jpeg" width="230"/>
-   <img src="https://user-images.githubusercontent.com/46109133/155231022-7d54b0eb-a0c5-4e60-a244-3e5c30fc9373.jpeg" width="230"/>
-   <img src="https://user-images.githubusercontent.com/46109133/155231022-7d54b0eb-a0c5-4e60-a244-3e5c30fc9373.jpeg" width="230"/>
-
-</div>
-  
-
 
 # :rocket: Tecnologias
 Esse:
 
-Descreva as tecnologias usadas aqui
+- Dart
+- Flutter
+- url_launcher
+- linkify
 
 # :computer: Como rodar
 
