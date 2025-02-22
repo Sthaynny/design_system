@@ -29,6 +29,7 @@ export 'src/themes/texts/styles/ds_headline_small_text_style.dart'
     show DSHeadlineSmallTextStyle;
 export 'src/utils/ds_animate.dart' show DSAnimate;
 export 'src/utils/ds_linkify.dart' show DSLinkify;
+export 'src/utils/ds_spacing.dart';
 export 'src/utils/ds_utils.dart' show DSUtils;
 export 'src/widgets/animations/ds_animated_size.dart' show DSAnimatedSize;
 export 'src/widgets/animations/ds_fading_circle_loading.dart'
