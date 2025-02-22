@@ -70,8 +70,6 @@ class DSSwitch extends DSSwitchBase {
         return isEnabled ? _activeColor : DSColors.gray.shade300;
       case (false):
         return isEnabled ? _inactiveColor : DSColors.gray.shade300;
-      default:
-        return _activeColor;
     }
   }
 }
