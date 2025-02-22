@@ -2,7 +2,7 @@ import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 
 class SampleTextStyleShowcase extends StatelessWidget {
-  const SampleTextStyleShowcase({Key? key}) : super(key: key);
+  const SampleTextStyleShowcase({super.key});
 
   @override
   Widget build(BuildContext context) {

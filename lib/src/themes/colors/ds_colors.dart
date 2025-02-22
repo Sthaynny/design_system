@@ -43,7 +43,7 @@ abstract class DSColors {
     (List<Color> newShades, Color color) resultSecundary =
         _generateShades(_colorBaseSecundary);
 
-    primary = MaterialColor(resultPrimary.$2.value, {
+    primary = MaterialColor(resultPrimary.$2.toARGB32(), {
       50: resultPrimary.$1[1],
       100: resultPrimary.$1[2],
       200: resultPrimary.$1[3],
@@ -56,7 +56,7 @@ abstract class DSColors {
       900: resultPrimary.$1[10],
     });
 
-    secundary = MaterialColor(resultSecundary.$2.value, {
+    secundary = MaterialColor(resultSecundary.$2.toARGB32(), {
       50: resultSecundary.$1[1],
       100: resultSecundary.$1[2],
       200: resultSecundary.$1[3],

@@ -1,12 +1,12 @@
 import 'package:design_system/design_system.dart';
+import 'package:exemplo/controllers/sample_radio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:exemplo/controllers/sample_radio.dart';
 
 enum SingingCharacter { lafayette, jefferson }
 
 class SampleRadioShowcase extends StatelessWidget {
-  SampleRadioShowcase({Key? key}) : super(key: key);
+  SampleRadioShowcase({super.key});
 
   final SampleRadioController _controller = Get.put(SampleRadioController());
 

@@ -2,7 +2,7 @@ import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 
 class SampleUserAvatarShowcase extends StatelessWidget {
-  const SampleUserAvatarShowcase({Key? key}) : super(key: key);
+  const SampleUserAvatarShowcase({super.key});
 
   @override
   Widget build(BuildContext context) {
