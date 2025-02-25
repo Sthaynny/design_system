@@ -62,7 +62,6 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
         ValueListenableBuilder(
           valueListenable: _borderColor,
           builder: (_, value, __) => Container(
-            padding: const EdgeInsets.fromLTRB(12.0, 6.0, 4.0, 6.0),
             decoration: BoxDecoration(
               color: widget.isEnabled
                   ? DSColors.gray.shade50
