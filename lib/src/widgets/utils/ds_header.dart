@@ -61,6 +61,51 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
     isBackgroundLight = _backgroundColor.computeLuminance() > 0.5;
   }
 
+  factory DSHeader.customTitle({
+    required Widget customTitle,
+    String? subtitle,
+    String? customerName,
+    Uri? customerUri,
+    List<Widget>? actions,
+    Widget? leading,
+    bool? canPop,
+    void Function()? onBackButtonPressed,
+    DSTextStyle? titleTextStyle,
+    double? elevation = 0.0,
+    Widget? bottomWidget,
+    void Function()? onTap,
+    Color? backgroundColor,
+    Color borderColor = DSColors.neutralMediumWave,
+    bool showBorder = true,
+    bool visible = true,
+    bool centerTitle = false,
+    SystemUiOverlayStyle? systemUiOverlayStyle,
+    double? leadingWidth,
+  }) {
+    return DSHeader(
+      title: '',
+      subtitle: subtitle,
+      customerName: customerName,
+      customerUri: customerUri,
+      actions: actions,
+      leading: leading,
+      canPop: canPop,
+      onBackButtonPressed: onBackButtonPressed,
+      titleTextStyle: titleTextStyle,
+      elevation: elevation,
+      bottomWidget: bottomWidget,
+      onTap: onTap,
+      backgroundColor: backgroundColor,
+      borderColor: borderColor,
+      showBorder: showBorder,
+      visible: visible,
+      centerTitle: centerTitle,
+      systemUiOverlayStyle: systemUiOverlayStyle,
+      leadingWidth: leadingWidth,
+      customTitle: customTitle,
+    );
+  }
+
   Color get _backgroundColor => backgroundColor ?? DSColors.gray.shade100;
   @override
   Widget build(BuildContext context) {
@@ -97,7 +142,7 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
             titleSpacing: 0,
             leadingWidth: leadingWidth ?? 40.0,
             leading: _buildLeading(context),
-            title:customTitle?? _buildTitle(context),
+            title: customTitle ?? _buildTitle(context),
             systemOverlayStyle: systemUiOverlayStyle,
           ),
         ),
