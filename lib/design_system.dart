@@ -31,6 +31,7 @@ export 'src/utils/ds_animate.dart' show DSAnimate;
 export 'src/utils/ds_linkify.dart' show DSLinkify;
 export 'src/utils/ds_spacing.dart';
 export 'src/utils/ds_utils.dart' show DSUtils;
+export 'src/validators/ds_validators.dart' show DSValidators;
 export 'src/widgets/animations/ds_animated_size.dart' show DSAnimatedSize;
 export 'src/widgets/animations/ds_fading_circle_loading.dart'
     show DSFadingCircleLoading;
