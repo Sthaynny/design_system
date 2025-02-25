@@ -30,6 +30,9 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
   final bool showBorder;
   final bool visible;
   late final bool isBackgroundLight;
+  final double? leadingWidth;
+  final bool centerTitle;
+  final Widget? customTitle;
 
   DSHeader({
     super.key,
@@ -49,7 +52,10 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
     this.borderColor = DSColors.neutralMediumWave,
     this.showBorder = true,
     this.visible = true,
+    this.centerTitle = false,
     final SystemUiOverlayStyle? systemUiOverlayStyle,
+    this.leadingWidth,
+    this.customTitle,
   }) : systemUiOverlayStyle =
             systemUiOverlayStyle ?? DSSystemOverlayStyle.light {
     isBackgroundLight = _backgroundColor.computeLuminance() > 0.5;
@@ -76,7 +82,7 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
           top: false,
           bottom: false,
           child: AppBar(
-            centerTitle: false,
+            centerTitle: centerTitle,
             automaticallyImplyLeading: false,
             elevation: elevation,
             backgroundColor: Colors.transparent,
@@ -89,9 +95,9 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
                 : null,
             actions: actions,
             titleSpacing: 0,
-            leadingWidth: 40.0,
+            leadingWidth: leadingWidth ?? 40.0,
             leading: _buildLeading(context),
-            title: _buildTitle(context),
+            title:customTitle?? _buildTitle(context),
             systemOverlayStyle: systemUiOverlayStyle,
           ),
         ),
