@@ -1,6 +1,6 @@
 class DSValidators {
   /// Valida um e-mail
-  static String? email(String? value) {
+  String? email(String? value) {
     if (value == null || value.isEmpty) return "E-mail obrigatório";
 
     final emailRegex =
@@ -11,7 +11,7 @@ class DSValidators {
   }
 
   /// Valida um CPF
-  static String? cpf(String? value, {bool validateFormat = false}) {
+  String? cpf(String? value, {bool validateFormat = false}) {
     if (value == null || value.isEmpty) return "CPF obrigatório";
 
     if (validateFormat && !cpfFormat(value)) {
@@ -23,7 +23,7 @@ class DSValidators {
   }
 
   /// Valida um CPF
-  static bool cpfFormat(String value) {
+  bool cpfFormat(String value) {
     final cpfRegex = RegExp(r'^\d{3}\.\d{3}\.\d{3}-\d{2}$');
     if (!cpfRegex.hasMatch(value)) {
       return false;
@@ -32,7 +32,7 @@ class DSValidators {
   }
 
   /// Valida um CNPJ
-  static String? cnpj(String? value, {bool validateFormat = false}) {
+  String? cnpj(String? value, {bool validateFormat = false}) {
     if (value == null || value.isEmpty) return "CNPJ obrigatório";
 
     if (validateFormat && !cnpjFormat(value)) {
@@ -43,7 +43,7 @@ class DSValidators {
   }
 
   /// Validar formato CNPJ
-  static bool cnpjFormat(String value) {
+  bool cnpjFormat(String value) {
     final cnpjRegex = RegExp(r'^\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}$');
     if (!cnpjRegex.hasMatch(value)) {
       return false;
@@ -53,7 +53,7 @@ class DSValidators {
   }
 
   /// Valida um número de telefone (aceita DDD + 8 ou 9 dígitos)
-  static String? telefone(String? value) {
+  String? telefone(String? value) {
     if (value == null || value.isEmpty) return "Telefone obrigatório";
 
     final telefoneRegex = RegExp(r'^\(?\d{2}\)?\s?9?\d{4}-?\d{4}$');
@@ -63,7 +63,7 @@ class DSValidators {
   }
 
   /// Método auxiliar para validar CPF
-  static bool _validarCPF(String cpf) {
+  bool _validarCPF(String cpf) {
     cpf = cpf.replaceAll(RegExp(r'\D'), ''); // Remove caracteres não numéricos
     if (cpf.length != 11 || RegExp(r'(\d)\1{10}').hasMatch(cpf)) return false;
 
@@ -87,7 +87,7 @@ class DSValidators {
   }
 
   /// Método auxiliar para validar CNPJ
-  static bool _validarCNPJ(String cnpj) {
+  bool _validarCNPJ(String cnpj) {
     cnpj =
         cnpj.replaceAll(RegExp(r'\D'), ''); // Remove caracteres não numéricos
     if (cnpj.length != 14) return false;
