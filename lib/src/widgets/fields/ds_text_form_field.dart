@@ -17,8 +17,8 @@ class DSTextFormField extends StatefulWidget {
     this.hintText,
     this.labelText,
     this.isEnabled = true,
-    this.errorText,
     this.inputFormatters,
+    this.validator,
   });
 
   final TextInputType textInputType;
@@ -27,8 +27,8 @@ class DSTextFormField extends StatefulWidget {
   final String? hintText;
   final String? labelText;
   final bool isEnabled;
-  final String? errorText;
   final List<TextInputFormatter>? inputFormatters;
+  final String? Function(String?)? validator;
 
   @override
   State<DSTextFormField> createState() => _DSTextFormFieldState();
@@ -38,6 +38,7 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
   final ValueNotifier<Color> _borderColor =
       ValueNotifier(DSColors.gray.shade100);
   final FocusNode _focusNode = FocusNode();
+  final ValueNotifier<bool> _isError = ValueNotifier(false);
 
   @override
   void initState() {
@@ -49,6 +50,7 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
 
   @override
   void dispose() {
+    _isError.dispose();
     _focusNode.dispose();
     super.dispose();
   }
@@ -74,6 +76,11 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
               focusNode: _focusNode,
               controller: widget.controller,
               onChanged: widget.onChanged,
+              validator: (value) {
+                final result = widget.validator?.call(value);
+                _isError.value = result != null;
+                return result;
+              },
               style: DSBodyTextStyle(
                 color: widget.isEnabled
                     ? DSColors.primary.shade900
@@ -105,22 +112,25 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
             ),
           ),
         ),
-        Visibility(
-          visible: widget.errorText != null,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 4.0),
-            child: Row(
-              children: [
-                const Icon(
-                  DSIcons.error_solid,
-                  color: DSColors.error,
-                ),
-                const SizedBox(width: 6.0),
-                DSCaptionSmallText(
-                  widget.errorText,
-                  color: DSColors.error,
-                )
-              ],
+        ValueListenableBuilder(
+          valueListenable: _isError,
+          builder: (__, isError, _) => Visibility(
+            visible: isError,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 4.0),
+              child: Row(
+                children: [
+                  const Icon(
+                    DSIcons.error_solid,
+                    color: DSColors.error,
+                  ),
+                  const SizedBox(width: 6.0),
+                  DSCaptionSmallText(
+                    widget.validator?.call(widget.controller?.text ?? '') ?? '',
+                    color: DSColors.error,
+                  )
+                ],
+              ),
             ),
           ),
         ),
@@ -129,7 +139,7 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
   }
 
   Color _color() {
-    if (widget.errorText != null) {
+    if (_isError.value) {
       return DSColors.error;
     } else if (_focusNode.hasFocus) {
       return DSColors.primary.shade800;
