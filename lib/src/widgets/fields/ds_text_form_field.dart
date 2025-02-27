@@ -14,21 +14,23 @@ class DSTextFormField extends StatefulWidget {
     required this.textInputType,
     this.onChanged,
     this.controller,
-    this.hintText,
-    this.labelText,
+    this.hint,
+    this.label,
     this.isEnabled = true,
     this.inputFormatters,
     this.validator,
+    this.obscureText = false,
   });
 
   final TextInputType textInputType;
   final void Function(String term)? onChanged;
   final TextEditingController? controller;
-  final String? hintText;
-  final String? labelText;
+  final String? hint;
+  final String? label;
   final bool isEnabled;
   final List<TextInputFormatter>? inputFormatters;
   final String? Function(String?)? validator;
+  final bool obscureText;
 
   @override
   State<DSTextFormField> createState() => _DSTextFormFieldState();
@@ -92,6 +94,7 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
               ),
               autofocus: false,
               enabled: widget.isEnabled,
+              obscureText: widget.obscureText,
               inputFormatters: widget.inputFormatters,
               decoration: InputDecoration(
                 fillColor: widget.isEnabled
@@ -99,7 +102,7 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
                     : DSColors.gray.shade300,
                 contentPadding: EdgeInsets.zero,
                 border: InputBorder.none,
-                labelText: widget.labelText,
+                labelText: widget.label,
                 labelStyle: DSCaptionTextStyle(
                   fontWeight: DSFontWeights.bold,
                   color: widget.isEnabled
@@ -107,7 +110,7 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
                       : DSColors.gray.shade50,
                 ),
                 filled: true,
-                hintText: widget.hintText ?? widget.labelText,
+                hintText: widget.hint ?? widget.label,
                 floatingLabelBehavior: FloatingLabelBehavior.auto,
                 hintStyle: DSBodyTextStyle(
                   color: DSColors.gray.shade300,

@@ -21,7 +21,7 @@ class SampleInputShowcase extends StatelessWidget {
           ),
           const DSTextFormField(
             textInputType: TextInputType.name,
-            labelText: 'Name',
+            label: 'Name',
           ),
           DSSelectInput(
             controller: controller,
