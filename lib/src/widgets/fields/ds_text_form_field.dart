@@ -11,7 +11,7 @@ import '../texts/ds_caption_small_text.dart';
 class DSTextFormField extends StatefulWidget {
   const DSTextFormField({
     super.key,
-    required this.textInputType,
+    this.textInputType,
     this.onChanged,
     this.controller,
     this.hint,
@@ -22,7 +22,7 @@ class DSTextFormField extends StatefulWidget {
     this.obscureText = false,
   });
 
-  final TextInputType textInputType;
+  final TextInputType? textInputType;
   final void Function(String term)? onChanged;
   final TextEditingController? controller;
   final String? hint;
