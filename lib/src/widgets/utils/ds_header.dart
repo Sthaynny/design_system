@@ -196,7 +196,7 @@ class DSHeader extends StatelessWidget implements PreferredSizeWidget {
                     : null,
                 iconSize: 28,
                 icon: Icon(
-                  DSIcons.arrow_left_outline,
+                  DSIcons.arrow_left_outline.data,
                   color: isBackgroundLight
                       ? DSColors.gray.shade300
                       : DSColors.gray.shade200,

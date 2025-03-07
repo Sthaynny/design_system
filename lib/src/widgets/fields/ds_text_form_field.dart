@@ -127,8 +127,8 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
               padding: const EdgeInsets.only(top: 4.0),
               child: Row(
                 children: [
-                  const Icon(
-                    DSIcons.error_solid,
+                  Icon(
+                    DSIcons.error_solid.data,
                     color: DSColors.error,
                   ),
                   const SizedBox(width: 6.0),

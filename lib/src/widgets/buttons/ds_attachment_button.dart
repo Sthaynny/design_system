@@ -11,7 +11,7 @@ class DSAttachmentButton extends DSIconButton {
     super.isLoading,
   }) : super(
           icon: Icon(
-            DSIcons.attach_outline,
+            DSIcons.attach_outline.data,
             color: DSColors.gray.shade500,
           ),
         );

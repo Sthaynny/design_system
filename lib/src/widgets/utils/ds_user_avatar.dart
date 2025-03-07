@@ -109,7 +109,7 @@ class DSUserAvatar extends StatelessWidget {
                     textAlign: TextAlign.center,
                   )
                 : Icon(
-                    DSIcons.user_default_outline,
+                    DSIcons.user_default_outline.data,
                     color: DSColors.gray.shade200,
                     size: 20.0,
                   ),

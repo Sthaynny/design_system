@@ -53,8 +53,8 @@ class DSSelectInput extends StatelessWidget {
               decoration: InputDecoration(
                 suffixIcon: Visibility(
                   visible: showSuffixIcon,
-                  child: const Icon(
-                    DSIcons.arrow_down_outline,
+                  child:   Icon(
+                    DSIcons.arrow_down_outline.data,
                     color: DSColors.neutralMediumCloud,
                   ),
                 ),

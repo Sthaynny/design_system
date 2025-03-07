@@ -15,8 +15,8 @@ class DSSendButton extends DSButton {
     Color? foregroundColor,
   }) : super(
           shape: DSButtonShape.rounded,
-          leadingIcon: const Icon(
-            DSIcons.send_solid,
+          leadingIcon: Icon(
+            DSIcons.send_solid.data,
           ),
           backgroundColor: isEnabled
               ? (backgroundColor ?? DSColors.primary.shade800)

@@ -23,7 +23,7 @@ class DSCustomRepliesIconButton extends StatelessWidget {
           isLoading: isLoading,
           onPressed: onPressed,
           icon: Icon(
-            DSIcons.message_talk_outline,
+            DSIcons.message_talk_outline.data,
             color: DSColors.gray.shade500,
           ),
         ),

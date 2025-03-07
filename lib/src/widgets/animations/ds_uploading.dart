@@ -48,7 +48,7 @@ class _DSUploadingState extends State<DSUploading> {
           opacity: value ? 1.0 : 0.0,
           duration: const Duration(seconds: 1),
           child: Icon(
-            DSIcons.upload_outline,
+            DSIcons.upload_outline.data,
             color: widget.color,
             size: widget.size,
           ),

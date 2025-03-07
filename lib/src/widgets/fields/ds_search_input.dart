@@ -46,7 +46,7 @@ class DSSearchInput extends StatelessWidget {
               splashRadius: 1,
               onPressed: () => onClear(),
               icon: Icon(
-                DSIcons.error_solid,
+                DSIcons.error_solid.data,
                 color: DSColors.secundary.shade900,
               ),
             ),
@@ -69,7 +69,7 @@ class DSSearchInput extends StatelessWidget {
                 ),
               ),
               child: Icon(
-                DSIcons.search_outline,
+                DSIcons.search_outline.data,
                 size: 21.0,
                 color: iconForegroundColor ?? DSColors.primary.shade800,
               ),
