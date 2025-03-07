@@ -12,9 +12,11 @@ class DSSpinnerLoading extends StatefulWidget {
     this.size = 30.0,
     this.duration = const Duration(milliseconds: 500),
     this.controller,
+    this.backgroundColor,
   });
 
   final Color? color;
+  final Color? backgroundColor;
   final double size;
   final double lineWidth;
   final Duration duration;
@@ -66,7 +68,7 @@ class DSSpinnerLoadingState extends State<DSSpinnerLoading>
           child: Container(
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.transparent,
+              color: widget.backgroundColor ?? DSColors.neutralMediumWave,
               border: Border.all(
                 width: widget.lineWidth,
                 color: DSColors.black.withValues(alpha: 255 * 0.32),
