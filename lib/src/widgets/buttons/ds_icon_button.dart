@@ -1,3 +1,4 @@
+import 'package:design_system/src/themes/icons/ds_icons.dart';
 import 'package:flutter/material.dart';
 
 import '../../themes/colors/ds_colors.dart';
@@ -7,9 +8,10 @@ class DSIconButton extends InkWell {
   DSIconButton({
     super.key,
     required void Function() onPressed,
-    required Widget icon,
+    required DSIcons icon,
     final bool isLoading = false,
     final double size = 44.0,
+    final Color? color,
   }) : super(
           onTap: isLoading ? null : onPressed,
           child: SizedBox.fromSize(
@@ -21,7 +23,7 @@ class DSIconButton extends InkWell {
                       size: 24,
                       lineWidth: 4.0,
                     )
-                  : icon,
+                  : Icon(icon.data, color: color ?? DSColors.primary),
             ),
           ),
         );

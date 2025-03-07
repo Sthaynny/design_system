@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import '../../themes/colors/ds_colors.dart';
 import '../../themes/icons/ds_icons.dart';
 import 'ds_icon_button.dart';
@@ -10,9 +8,7 @@ class DSAttachmentButton extends DSIconButton {
     required super.onPressed,
     super.isLoading,
   }) : super(
-          icon: Icon(
-            DSIcons.attach_outline.data,
-            color: DSColors.gray.shade500,
-          ),
+          icon: DSIcons.attach_outline,
+          color: DSColors.gray.shade500,
         );
 }
