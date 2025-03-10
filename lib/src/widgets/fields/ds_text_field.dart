@@ -91,7 +91,7 @@ class _DSTextFieldState extends State<DSTextField> {
                   padding: const EdgeInsets.only(top: 4.0),
                   child: Row(
                     children: [
-                        Icon(
+                      Icon(
                         DSIcons.error_solid.data,
                         color: DSColors.error,
                       ),
@@ -141,6 +141,9 @@ class _DSTextFieldState extends State<DSTextField> {
               enabledBorder: InputBorder.none,
               errorBorder: InputBorder.none,
               disabledBorder: InputBorder.none,
+              fillColor: widget.isEnabled
+                  ? DSColors.gray.shade50
+                  : DSColors.gray.shade300,
               hintText: widget.hint,
               hintStyle: DSBodyTextStyle(
                 color: DSColors.gray.shade300,
