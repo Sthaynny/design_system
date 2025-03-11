@@ -42,7 +42,7 @@ class DSInputContainer extends StatelessWidget {
                           ? DSColors.gray.shade300
                           : DSColors.gray.shade100,
             ),
-            color: isEnabled ? DSColors.gray.shade200 : DSColors.gray.shade50,
+            color: isEnabled ? DSColors.gray.shade50 : DSColors.gray.shade200,
           ),
           child: Container(
             constraints: const BoxConstraints(

@@ -1,0 +1,2 @@
+C:/Users/sthay/Documents/GitHub/design_system/exemplo/android/app/.cxx/Debug/644t6s4y/x86/CMakeFiles/edit_cache.dir
+C:/Users/sthay/Documents/GitHub/design_system/exemplo/android/app/.cxx/Debug/644t6s4y/x86/CMakeFiles/rebuild_cache.dir

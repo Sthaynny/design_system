@@ -63,6 +63,7 @@ class _DSTextFieldState extends State<DSTextField> {
                 hasError: widget.errorText?.isNotEmpty ?? false,
                 shape: widget.shape,
                 hasFocus: hasFocusNofifier.value,
+                isEnabled: widget.isEnabled,
                 padding: const EdgeInsets.only(
                   left: 12.0,
                   right: 6.0,
@@ -124,7 +125,11 @@ class _DSTextFieldState extends State<DSTextField> {
             scrollController: _scrollController,
             enabled: widget.isEnabled,
             obscureText: widget.obscureText,
-            style: const DSBodyTextStyle(),
+            style: DSBodyTextStyle(
+              color: widget.isEnabled
+                  ? DSColors.primary.shade900
+                  : DSColors.gray.shade50,
+            ),
             cursorColor: DSColors.primary,
             cursorHeight: 20.0,
             textCapitalization: widget.textCapitalization,

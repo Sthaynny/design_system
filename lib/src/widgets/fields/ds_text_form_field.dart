@@ -99,7 +99,7 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
               decoration: InputDecoration(
                 fillColor: widget.isEnabled
                     ? DSColors.gray.shade50
-                    : DSColors.gray.shade300,
+                    : DSColors.gray.shade200,
                 contentPadding: EdgeInsets.zero,
                 border: InputBorder.none,
                 labelText: widget.label,
@@ -107,7 +107,7 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
                   fontWeight: DSFontWeights.bold,
                   color: widget.isEnabled
                       ? DSColors.primary.shade800
-                      : DSColors.gray.shade50,
+                      : DSColors.gray.shade300,
                 ),
                 filled: true,
                 hintText: widget.hint ?? widget.label,

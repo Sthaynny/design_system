@@ -23,6 +23,20 @@ class SampleInputShowcase extends StatelessWidget {
             textInputType: TextInputType.name,
             label: 'Name',
           ),
+          const DSTextFormField(
+            textInputType: TextInputType.name,
+            label: 'Name',
+            isEnabled: false,
+          ),
+          const DSTextField(
+            textInputType: TextInputType.name,
+            hint: 'Name',
+          ),
+          const DSTextField(
+            textInputType: TextInputType.name,
+            hint: 'Name',
+            isEnabled: false,
+          ),
           DSSelectInput(
             controller: controller,
             textInputType: TextInputType.name,
