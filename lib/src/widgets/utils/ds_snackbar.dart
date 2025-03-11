@@ -1,7 +1,6 @@
 import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 
-
 class DSSnackBar extends SnackBar {
   DSSnackBar._({
     required String text,
@@ -9,7 +8,7 @@ class DSSnackBar extends SnackBar {
     Color? backgroundColor,
     super.action,
   }) : super(
-          content: DSCaptionSmallText(
+          content: DSBodyText(
             text,
             color: textColor ?? DSColors.neutralDarkCity,
             maxLines: 3,

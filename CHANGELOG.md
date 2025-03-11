@@ -6,3 +6,4 @@
 * Otimização dos inputs de textos
 * Update no botão e quando estão desabilitados
 * Criando DSSnackBar
+* Atualizando tamanho da fonte snackbar
