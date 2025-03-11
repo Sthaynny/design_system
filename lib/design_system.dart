@@ -71,3 +71,4 @@ export 'src/widgets/utils/ds_divider.dart' show DSDivider;
 export 'src/widgets/utils/ds_header.dart' show DSHeader;
 export 'src/widgets/utils/ds_progress_bar.dart' show DSProgressBar;
 export 'src/widgets/utils/ds_user_avatar.dart' show DSUserAvatar;
+export 'src/widgets/utils/ds_snackbar.dart' show DSSnackBar;
