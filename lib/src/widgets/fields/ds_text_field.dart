@@ -52,11 +52,24 @@ class _DSTextFieldState extends State<DSTextField> {
   final hasFocusNofifier = ValueNotifier(false);
 
   @override
+  void initState() {
+    widget.focusNode?.addListener(
+        () => hasFocusNofifier.value = widget.focusNode!.hasFocus);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    widget.focusNode?.removeListener(() {});
+    hasFocusNofifier.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) => ValueListenableBuilder(
         valueListenable: hasFocusNofifier,
         builder: (context, value, child) => Focus(
           focusNode: widget.focusNode,
-          onFocusChange: (hasFocus) => widget.focusNode?.nextFocus(),
           child: Column(
             children: [
               DSInputContainer(

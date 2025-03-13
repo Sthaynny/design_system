@@ -37,7 +37,7 @@ class DSInputContainer extends StatelessWidget {
               color: hasError
                   ? DSColors.error
                   : hasFocus ?? false
-                      ? DSColors.primary
+                      ? DSColors.primary.shade600
                       : isEnabled
                           ? DSColors.gray.shade300
                           : DSColors.gray.shade100,

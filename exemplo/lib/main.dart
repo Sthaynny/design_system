@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                     const Divider(color: DSColors.neutralDarkCity),
                     const SampleHeaderShowcase(),
                     const Divider(color: DSColors.neutralDarkCity),
-                    SampleInputShowcase(),
+                    const SampleInputShowcase(),
                     const Divider(color: DSColors.neutralDarkCity),
                   ],
                 ),
