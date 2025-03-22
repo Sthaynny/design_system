@@ -54,6 +54,7 @@ export 'src/widgets/fields/ds_select_input.dart' show DSSelectInput;
 export 'src/widgets/fields/ds_select_text_input.dart' show DSSelectTextInput;
 export 'src/widgets/fields/ds_text_field.dart' show DSTextField;
 export 'src/widgets/fields/ds_text_form_field.dart' show DSTextFormField;
+export 'src/widgets/grid/grid_export.dart';
 export 'src/widgets/radio/ds_radio.dart' show DSRadio;
 export 'src/widgets/radio/ds_radio_tile.dart' show DSRadioTile;
 export 'src/widgets/switch/ds_switch.dart' show DSSwitch;

@@ -14,3 +14,7 @@
 
 * Criando dropdown para o DS
 * Ajustando Select Input para auto complete
+
+## 1.0.3
+
+* Criando Grid Ajustavel com novas estrategias
