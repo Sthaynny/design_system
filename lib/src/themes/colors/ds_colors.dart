@@ -29,12 +29,13 @@ abstract class DSColors {
   });
   static const Color neutralDarkCity = Color(0xFF202C44);
 
-  static void inicialize({Color? primary, Color? secundary}) {
-    if (primary != null) {
-      _colorBasePrimary = primary;
+  static Future<void> inicialize(
+      {Color? primaryColor, Color? secundaryColor}) async {
+    if (primaryColor != null) {
+      _colorBasePrimary = primaryColor;
     }
-    if (secundary != null) {
-      _colorBaseSecundary = secundary;
+    if (secundaryColor != null) {
+      _colorBaseSecundary = secundaryColor;
     }
 
     (List<Color> newShades, Color color) resultPrimary =
@@ -43,7 +44,7 @@ abstract class DSColors {
     (List<Color> newShades, Color color) resultSecundary =
         _generateShades(_colorBaseSecundary);
 
-    primary = MaterialColor(resultPrimary.$2.toARGB32(), {
+    primary = MaterialColor(_colorBasePrimary.toARGB32(), {
       50: resultPrimary.$1[1],
       100: resultPrimary.$1[2],
       200: resultPrimary.$1[3],
@@ -56,7 +57,7 @@ abstract class DSColors {
       900: resultPrimary.$1[10],
     });
 
-    secundary = MaterialColor(resultSecundary.$2.toARGB32(), {
+    secundary = MaterialColor(_colorBaseSecundary.toARGB32(), {
       50: resultSecundary.$1[1],
       100: resultSecundary.$1[2],
       200: resultSecundary.$1[3],

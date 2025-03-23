@@ -11,8 +11,8 @@ import 'widgets/showcase/sample_radio.dart';
 import 'widgets/showcase/sample_switch.dart';
 import 'widgets/showcase/sample_text_style.dart';
 
-void main() {
-  DSColors.inicialize();
+Future<void> main() async {
+  await DSColors.inicialize(secundaryColor: Colors.amber);
   runApp(const SampleApp());
 }
 

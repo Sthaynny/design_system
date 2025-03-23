@@ -49,9 +49,10 @@ class SampleButtonShowcase extends StatelessWidget {
               Icons.info_outline,
               size: 20,
             ),
-            trailingIcon: const Icon(
+            trailingIcon: Icon(
               Icons.arrow_forward_ios_rounded,
               size: 15,
+              color: DSColors.secundary.shade500,
             ),
             // isEnabled: true,
             // isLoading: true,
