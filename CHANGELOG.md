@@ -1,4 +1,9 @@
-# 1.0.3
+# 1.0.4
+
+* Criação de input basico do calendario
+* Criação de form para input colendar
+
+## 1.0.3
 
 * Criando Grid Ajustavel com novas estrategias
 

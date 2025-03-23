@@ -47,7 +47,6 @@ class DSCalendar extends ShadCalendar {
     super.forwardNavigationButtonIconData,
     super.navigationButtonPadding,
     super.navigationButtonDisabledOpacity,
-    super.decoration,
     super.spacingBetweenMonths,
     super.runSpacingBetweenMonths,
     super.monthConstraints,
@@ -80,7 +79,9 @@ class DSCalendar extends ShadCalendar {
     super.selectedDayButtonOusideMonthVariant,
     super.allowDeselection,
     super.groupId,
-  });
+  }) : super(
+          decoration: const ShadDecoration(),
+        );
 
   /// Cria um widget de calendário para seleção de múltiplas datas.
   DSCalendar.multiple({

@@ -1,6 +1,14 @@
 const _daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 extension DSDateTime on DateTime {
+  String get formatDateToPtBr {
+    final date = this;
+    final day = date.day.toString().padLeft(2, '0');
+    final month = date.month.toString().padLeft(2, '0');
+    final year = date.year.toString();
+    return '$day/$month/$year';
+  }
+
   bool isLeapYear(int value) =>
       value % 400 == 0 || (value % 4 == 0 && value % 100 != 0);
 
@@ -208,18 +216,17 @@ extension DSDateTime on DateTime {
 
   String getOrdinalDay() {
     if (day >= 11 && day <= 13) {
-      return '${day}th';
+      return '$day ';
     }
     switch (day % 10) {
       case 1:
-        return '${day}st';
+        return '$day ';
       case 2:
-        return '${day}nd';
+        return '$day ';
       case 3:
-        return '${day}rd';
+        return '$day ';
       default:
-        return '${day}th';
+        return '$day ';
     }
   }
 }
-

@@ -1,5 +1,4 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 
 /// Representa o modelo de dados para um m s espec fico no calend rio.
@@ -14,19 +13,8 @@ class DSCalendarModel extends ShadCalendarModel {
     required super.dates,
     required super.firstDateShown,
   });
-
-  @override
-  int get hashCode => Object.hashAll([month, dates, firstDateShown]);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-    return other is DSCalendarModel &&
-        other.month == month &&
-        listEquals(other.dates, dates) &&
-        other.firstDateShown == firstDateShown;
-  }
 }
+
 /// Encapsula um in cio e fim [DateTime] que representam o intervalo de datas.
 ///
 /// O intervalo inclui as datas de in cio e fim. As datas de in cio e fim podem
@@ -42,26 +30,4 @@ class DSDateTimeRange extends ShadDateTimeRange {
     /// A data de fim do intervalo de datas.
     super.end,
   });
-
-  /// Retorna um [Duration] do tempo entre [start] e [end].
-  ///
-  /// Veja [DateTime.difference] para mais detalhes.
-  @override
-  Duration? get duration =>
-      start == null || end == null ? null : end!.difference(start!);
-
-  @override
-  bool operator ==(Object other) {
-    if (other.runtimeType != runtimeType) {
-      return false;
-    }
-    return other is DateTimeRange && other.start == start && other.end == end;
-  }
-
-  @override
-  int get hashCode => Object.hashAll([start, end]);
-
-  @override
-  String toString() => 'ShadDateTimeRange(start: $start, end $end)';
 }
-

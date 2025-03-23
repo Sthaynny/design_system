@@ -97,6 +97,40 @@ class _SampleInputShowcaseState extends State<SampleInputShowcase> {
                 value: value,
                 onChanged: (value) => valueNotifier.value = value),
           ),
+          DsInputDatePicker(
+            formatDate: (p0) => p0.formatDateToPtBr,
+          ),
+          ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 600),
+            child: DsInputDatePicker.range(),
+          ),
+          DSDateFormField(
+            label: const Text('Date of birth'),
+            onChanged: print,
+            description:
+                const Text('Your date of birth is used to calculate your age.'),
+            validator: (v) {
+              if (v == null) {
+                return 'A date of birth is required.';
+              }
+              return null;
+            },
+          ),
+          DsDateRangeFormField(
+            label: const Text('Range of dates'),
+            onChanged: print,
+            description: const Text(
+                'Select the range of dates you want to search between.'),
+            validator: (v) {
+              if (v == null) return 'A range of dates is required.';
+              if (v.start == null) {
+                return 'The start date is required.';
+              }
+              if (v.end == null) return 'The end date is required.';
+
+              return null;
+            },
+          ),
         ],
       ),
     );

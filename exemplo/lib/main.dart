@@ -1,8 +1,8 @@
 import 'package:design_system/design_system.dart';
+import 'package:exemplo/widgets/showcase/sample_calendar.dart';
 import 'package:exemplo/widgets/showcase/sample_user_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/route_manager.dart';
 
 import 'widgets/showcase/sample_button.dart';
 import 'widgets/showcase/sample_header.dart';
@@ -21,15 +21,9 @@ class SampleApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return DSApp(
       debugShowCheckedModeBanner: false,
-      title: 'Blip Design System Showcase',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        textTheme: const DSTextTheme(),
-        textSelectionTheme: DSTextSelectionThemeData(),
-        cupertinoOverrideTheme: const DSCupertinoThemeData(),
-      ),
+      title: 'Design System Showcase',
       home: const HomePage(),
     );
   }
@@ -78,6 +72,14 @@ class _HomePageState extends State<HomePage> {
                     const SampleHeaderShowcase(),
                     const Divider(color: DSColors.neutralDarkCity),
                     const SampleInputShowcase(),
+                    const Divider(color: DSColors.neutralDarkCity),
+                    DSPrimaryButton(
+                        onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const SampleCalendarShowcase())),
+                        label: 'Calendar'),
                     const Divider(color: DSColors.neutralDarkCity),
                   ],
                 ),

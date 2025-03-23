@@ -1,5 +1,6 @@
 library design_system;
 
+export 'src/ds_app.dart';
 export 'src/enums/ds_align.dart' show DSAlign;
 export 'src/enums/ds_border_radius.dart' show DSBorderRadius;
 export 'src/enums/ds_input_container_shape.dart' show DSInputContainerShape;
@@ -51,7 +52,11 @@ export 'src/widgets/buttons/ds_secondary_button.dart' show DSSecondaryButton;
 export 'src/widgets/buttons/ds_send_button.dart' show DSSendButton;
 export 'src/widgets/buttons/ds_tertiary_button.dart' show DSTertiaryButton;
 export 'src/widgets/calendar/ds_calendar.dart';
+export 'src/widgets/fields/ds_date_form_field.dart' show DSDateFormField;
+export 'src/widgets/fields/ds_date_range_form_field.dart'
+    show DsDateRangeFormField;
 export 'src/widgets/fields/ds_input_container.dart' show DSInputContainer;
+export 'src/widgets/fields/ds_input_date_picker.dart' show DsInputDatePicker;
 export 'src/widgets/fields/ds_search_input.dart' show DSSearchInput;
 export 'src/widgets/fields/ds_select_input.dart' show DSSelectInput;
 export 'src/widgets/fields/ds_select_text_input.dart' show DSSelectTextInput;
