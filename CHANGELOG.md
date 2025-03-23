@@ -1,7 +1,7 @@
 # 1.0.4
 
 * Criação de input basico do calendario
-* Criação de form para input colendar
+* Criação de form para input calendar
 
 ## 1.0.3
 
