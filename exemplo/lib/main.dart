@@ -1,12 +1,10 @@
 import 'package:design_system/design_system.dart';
-import 'package:exemplo/widgets/showcase/sample_calendar.dart';
 import 'package:exemplo/widgets/showcase/sample_user_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'widgets/showcase/sample_button.dart';
 import 'widgets/showcase/sample_header.dart';
-import 'widgets/showcase/sample_input.dart';
 import 'widgets/showcase/sample_radio.dart';
 import 'widgets/showcase/sample_switch.dart';
 import 'widgets/showcase/sample_text_style.dart';
@@ -21,10 +19,10 @@ class SampleApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DSApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Design System Showcase',
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
@@ -70,16 +68,6 @@ class _HomePageState extends State<HomePage> {
                     SampleRadioShowcase(),
                     const Divider(color: DSColors.neutralDarkCity),
                     const SampleHeaderShowcase(),
-                    const Divider(color: DSColors.neutralDarkCity),
-                    const SampleInputShowcase(),
-                    const Divider(color: DSColors.neutralDarkCity),
-                    DSPrimaryButton(
-                        onPressed: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    const SampleCalendarShowcase())),
-                        label: 'Calendar'),
                     const Divider(color: DSColors.neutralDarkCity),
                   ],
                 ),
