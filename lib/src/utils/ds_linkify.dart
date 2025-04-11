@@ -56,7 +56,7 @@ abstract class DSLinkify {
                 late final String text;
 
                 if (element is UrlElement) {
-                  text = element.url;
+                  text = element.text;
                   url = Uri.tryParse(element.url);
                 } else if (element is EmailElement) {
                   text = element.emailAddress;
