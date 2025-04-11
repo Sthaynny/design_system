@@ -86,6 +86,7 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
               onChanged: widget.onChanged,
               validator: (value) {
                 final result = widget.validator?.call(value);
+                _borderColor.value = _color();
                 _isError.value = result != null;
                 widget.onError?.call(_isError.value);
                 return null;
