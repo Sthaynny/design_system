@@ -85,7 +85,7 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
               validator: (value) {
                 final result = widget.validator?.call(value);
                 _isError.value = result != null;
-                return result;
+                return null;
               },
               style: DSBodyTextStyle(
                 color: widget.isEnabled
