@@ -20,6 +20,7 @@ class DSTextFormField extends StatefulWidget {
     this.inputFormatters,
     this.validator,
     this.obscureText = false,
+    this.onError,
   });
 
   final TextInputType? textInputType;
@@ -31,6 +32,7 @@ class DSTextFormField extends StatefulWidget {
   final List<TextInputFormatter>? inputFormatters;
   final String? Function(String?)? validator;
   final bool obscureText;
+  final void Function(bool)? onError;
 
   @override
   State<DSTextFormField> createState() => _DSTextFormFieldState();
@@ -85,6 +87,7 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
               validator: (value) {
                 final result = widget.validator?.call(value);
                 _isError.value = result != null;
+                widget.onError?.call(_isError.value);
                 return null;
               },
               style: DSBodyTextStyle(
