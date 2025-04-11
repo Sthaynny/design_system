@@ -116,7 +116,6 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
                   color: DSColors.gray.shade300,
                 ),
                 error: const SizedBox(),
-                errorText: '',
               ),
             ),
           ),
