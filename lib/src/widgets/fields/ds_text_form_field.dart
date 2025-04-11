@@ -115,7 +115,6 @@ class _DSTextFormFieldState extends State<DSTextFormField> {
                 hintStyle: DSBodyTextStyle(
                   color: DSColors.gray.shade300,
                 ),
-                error: const SizedBox(),
               ),
             ),
           ),
