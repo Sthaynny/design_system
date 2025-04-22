@@ -35,7 +35,7 @@ class DSSnackBar extends SnackBar {
       DSSnackBar._(
         text: text,
         backgroundColor: DSColors.success,
-        textColor: DSColors.black,
+        textColor: DSColors.white,
         action: action,
       );
   factory DSSnackBar.warning(
