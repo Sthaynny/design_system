@@ -7,6 +7,7 @@ export 'src/enums/ds_toast_action_type.dart' show DSToastActionType;
 export 'src/extensions/ds_border_radius.dart'
     show DSBorderRadiusExtension, DSBorderRadiusListExtension;
 export 'src/extensions/ds_date_time.dart';
+export 'src/extensions/ds_string.dart' show DSStringExtension;
 export 'src/themes/colors/ds_colors.dart' show DSColors;
 export 'src/themes/colors/ds_linear_gradient.dart' show DSLinearGradient;
 export 'src/themes/decotation/ds_decoration.dart';
